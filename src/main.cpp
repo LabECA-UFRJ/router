@@ -24,7 +24,7 @@ void packetReceived(const protocol_msgs::Packet::ConstPtr &packet)
 
 int main(int argc, char** argv)
 {
-    ros::init(argc, argv);
+    ros::init(argc, argv, "router");
     ros::NodeHandle nodeHandle;
 
     if (nodeHandle.getParam("addressHigh", addressHigh) == false) {
