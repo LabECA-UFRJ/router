@@ -33,7 +33,7 @@ int main(int argc, char** argv)
     }
 
     if (nodeHandle.getParam("addressLow", addressLow) == false) {
-        ROS_FATAL("Parameter addressLow not set.")
+        ROS_FATAL("Parameter addressLow not set.");
         return -1;
     }
 
