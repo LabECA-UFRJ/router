@@ -13,10 +13,13 @@ int32_t addressLow;
 
 void packetReceived(const protocol_msgs::Packet::ConstPtr &packet)
 {
-    packet.addressHigh = addressHigh;
-    packet.addressLow = addressLow;
+    protocol_msgs::Packet newPacket;
+    newPacket.addressHigh = addressHigh;
+    newPacket.addressLow = addressLow;
 
-    pub.publish(packet);
+    newPacket.data = packet->data;
+
+    pub.publish(newPacket);
 }
 
 int main(int argc, char** argv)
