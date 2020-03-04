@@ -2,7 +2,7 @@
 <package format="2">
   <name>router</name>
   <version>0.0.0</version>
-  <description></description>
+  <description>Set the address of protocol_msgs::Packet</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
