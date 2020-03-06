@@ -26,16 +26,21 @@ int main(int argc, char** argv)
 {
     ros::init(argc, argv, "router");
     ros::NodeHandle nodeHandle;
-
-    if (nodeHandle.getParam("addressHigh", addressHigh) == false) {
+    
+    std::string paramHigh;
+    if (ros::param::get("~addressHigh", paramHigh) == false) {
         ROS_FATAL("Parameter addressHigh not set.");
         return -1;
     }
 
-    if (nodeHandle.getParam("addressLow", addressLow) == false) {
+    std::string paramLow;
+    if (ros::param::get("~addressLow", paramLow) == false) {
         ROS_FATAL("Parameter addressLow not set.");
         return -1;
     }
+
+    addressHigh = std::stoi(paramHigh, 0, 16);
+    addressLow = std::stoi(paramLow, 0, 16);
 
     pub = nodeHandle.advertise<protocol_msgs::Packet>("addressed_packet", 5);
 
