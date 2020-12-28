@@ -2,7 +2,7 @@
 <package format="2">
   <name>router</name>
   <version>0.0.0</version>
-  <description>Set the address of protocol_msgs::Packet</description>
+  <description>Set the address of protocol_msgs::Packet or the id of simulation_msgs::RobotWheelSpeed</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
@@ -58,6 +58,8 @@
   <exec_depend>message_runtime</exec_depend>
 
   <depend>protocol_msgs</depend>
+  <depend>controller_msgs</depend>
+  <depend>simulation_msgs</depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>

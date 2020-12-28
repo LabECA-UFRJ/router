@@ -24,7 +24,7 @@ void packetReceived(const protocol_msgs::Packet::ConstPtr &packet)
 
 int main(int argc, char** argv)
 {
-    ros::init(argc, argv, "router");
+    ros::init(argc, argv, "xbee_router");
     ros::NodeHandle nodeHandle;
     
     std::string paramHigh;
