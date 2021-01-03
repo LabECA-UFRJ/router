@@ -39,10 +39,10 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(unity_node src/unity_router.cpp)
-add_dependencies(unity_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(unity_node ${catkin_LIBRARIES})
+add_executable(${PROJECT_NAME}_unity_node src/unity_router.cpp)
+add_dependencies(${PROJECT_NAME}_unity_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(${PROJECT_NAME}_unity_node ${catkin_LIBRARIES})
 
-add_executable(xbee_node src/xbee_router.cpp)
-add_dependencies(xbee_node ${${PROJECT_name}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(xbee_node ${catkin_LIBRARIES})
+add_executable(${PROJECT_NAME}_xbee_node src/xbee_router.cpp)
+add_dependencies(${PROJECT_NAME}_xbee_node ${${PROJECT_name}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(${PROJECT_NAME}_xbee_node ${catkin_LIBRARIES})
